@@ -13,12 +13,16 @@ def index(request):
 
     allProds = []
     catprods = Product.objects.values('category', 'id')
+    # print(catprods)
     cats = {item['category'] for item in catprods}
+    # print(cats)
+    # print("*****")
     for cat in cats:
         prod = Product.objects.filter(category=cat)
         n = len(prod)
         nSlides = n // 4 + ceil((n / 4) - (n // 4))
         allProds.append([prod, range(1, nSlides), nSlides])
+        # print(allProds)
 
     # params = {'no_of_slides':nSlides, 'range': range(1,nSlides),'product': products}
     # allProds = [[products, range(1, nSlides), nSlides],
