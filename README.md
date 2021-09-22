@@ -23,6 +23,6 @@ $ git clone https://github.com/mugdha273/MyAwesomeCart.git
 ```sh
 $ python manage.py runserver
 ```
-And navigate to `http://127.0.0.1:8000/shop/.
+And navigate to http://127.0.0.1:8000/shop/.
 
 
